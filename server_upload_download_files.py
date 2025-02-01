@@ -74,8 +74,8 @@ def send_file(client_socket, file_path):
         print("File download complete.")
    
 if __name__ == "__main__":
-    SERVER_IP = "192.168.7.12" 
-    SERVER_PORT = 8965
-    STORAGE_PATH = r"C:\Users\Mor Alon\Desktop\Storage_for_homework"  # Change to your desired storage path
+    SERVER_IP = "IP" 
+    SERVER_PORT = PORT
+    STORAGE_PATH = r"C:\Users\YOUR\STORAGE\PATH"  # Change to your desired storage path
 
     start_server(SERVER_IP, SERVER_PORT, STORAGE_PATH)
