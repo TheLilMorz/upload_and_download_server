@@ -9,8 +9,8 @@ def connecting(server_ip, server_port):
         client_socket.connect((server_ip, server_port))
         print(f"Connected to server at {server_ip}:{server_port}")
 
-        file_to_upload = "Alons_morning.txt"
-        file_to_download = "alons_life.txt"
+        file_to_upload = "FILE TO UPLOAD.txt"
+        file_to_download = "FILE TO DOWNLOAD.txt"
 
         action = input("What do you want to do (download or upload): ").lower()
 
@@ -64,8 +64,8 @@ def get_file(file_to_download , client_socket):
 
 def move_files_to_location(filename):
     try:
-        current_path = r"C:\\Alon VS Code\\"
-        target_path = r"C:\\Users\\eyalm\\Desktop\\files_from_server\\"
+        current_path = r"C:\\YOUR CURRENT PATH\\"
+        target_path = r"C:\\Users\\YOUR\\TARGET\\PATH\\"
         shutil.move(current_path + filename, target_path + filename)
     
     except Exception as e:
@@ -90,6 +90,6 @@ def send_file(filename, client_socket):
         sys.exit(1)
         
 if __name__== "__main__":
-    SERVER_IP = "192.168.7.12"
-    SERVER_PORT = 8965
+    SERVER_IP = "SERVER IP"
+    SERVER_PORT = PORT
     connecting(SERVER_IP, SERVER_PORT)
